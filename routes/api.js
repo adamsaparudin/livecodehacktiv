@@ -21,6 +21,9 @@ router.post('/restaurant', Restaurant.create)
 //view all
 router.get('/restaurant', Restaurant.read)
 //view one
+router.get('/restaurant/:id', Restaurant.readOne)
 
+router.put('/restaurant/:id', Restaurant.update)
+router.delete('/restaurant/:id', Restaurant.deleteRestaurant)
 
 module.exports = router
