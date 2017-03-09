@@ -24,6 +24,7 @@ readOne = (req, res, next) => {
 }
 
 update = (req, res, next) => {
+  console.log(req.body);
   Food.findOneAndUpdate({_id: req.params.id}, req.body, {}, (err, doc) => {
     if(err) res.send(err)
     res.send(doc)
